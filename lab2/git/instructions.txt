@@ -1,0 +1,69 @@
+top_head						-> header
+	top_head_1					-> header left side
+		top_head_logo			-> headere left side logo
+			top_head_logo_link
+			img_logo
+		top_head_options		-> some div with select attributes
+			select_palatform
+			select_solutions
+			select_resources
+			select_open_source
+			select_enterprise
+			link_pricing
+				lp_form
+					lpf_link
+
+	top_head_2
+		top_head_search
+			ths_search
+		dividersolid
+		top_head_dashboard
+			thd_dashboard
+
+text_center
+	hero_part
+		hero_title
+		hero_info
+		hero_trial_button
+
+	pricing
+		p_free_outline
+			p_free
+				pft price_top
+					pft_s
+						pft_h1
+						pft_p
+					pft_price
+				pfb price_bot
+					pfbt
+						details
+						...
+				pfbb
+					addons
+					details
+					...
+
+		p_team_outline
+			p_outline
+				ptt price_top
+					ptt_s
+						ptt_h1
+						ptt_p
+					ptt_price
+				ptb price_bot
+
+
+		p_enterprise_outline
+			p_enterprise
+				pet price_top
+					pet_s
+						pet_h1
+						pet_p
+					pet_price
+				peb price_bot
+
+
+
+
+
+
