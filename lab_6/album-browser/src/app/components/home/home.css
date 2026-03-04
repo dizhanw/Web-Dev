@@ -1,0 +1,53 @@
+.hero {
+  padding: 40px 0;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #555;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #3a6cf4;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cta-btn:hover {
+  background: #2a5ce4;
+  text-decoration: none;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.feature-card h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  color: #666;
+}

@@ -1,0 +1,40 @@
+h1 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.info-card h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #888;
+}
+
+.feature-item {
+  padding: 6px 0;
+  font-size: 14px;
+  color: #444;
+}

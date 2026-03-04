@@ -1,0 +1,57 @@
+<div class="detail-page">
+  <button class="back-btn" (click)="goBack()">← Back to Albums</button>
+
+  <div class="loading-container" *ngIf="loading">
+    <div class="spinner"></div>
+    <p>Loading album...</p>
+  </div>
+
+  <div class="detail-content" *ngIf="!loading && album">
+    <div class="detail-header">
+      <div class="album-badge">Album #{{ album.id }}</div>
+      <h1 class="album-title">{{ album.title }}</h1>
+      <div class="album-meta">
+        <span class="meta-item">
+          <span class="meta-label">User ID</span>
+          <span class="meta-value">{{ album.userId }}</span>
+        </span>
+        <span class="meta-item">
+          <span class="meta-label">Album ID</span>
+          <span class="meta-value">{{ album.id }}</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="edit-section">
+      <label class="edit-label">Edit Title</label>
+      <div class="edit-row">
+        <input
+          class="edit-input"
+          type="text"
+          [(ngModel)]="editTitle"
+          placeholder="Album title..."
+        />
+        <button
+          class="save-btn"
+          (click)="saveAlbum()"
+          [disabled]="saving || editTitle.trim() === ''"
+        >
+          <span *ngIf="!saving && !saveSuccess">Save</span>
+          <span *ngIf="saving">Saving...</span>
+          <span *ngIf="saveSuccess" class="saved-indicator">✓ Saved</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="action-row">
+      <button class="photos-btn" (click)="viewPhotos()">
+        <span>⊞</span> View Photos
+      </button>
+    </div>
+  </div>
+
+  <div class="not-found" *ngIf="!loading && !album">
+    <p>Album not found.</p>
+    <button class="back-btn" (click)="goBack()">← Back to Albums</button>
+  </div>
+</div>

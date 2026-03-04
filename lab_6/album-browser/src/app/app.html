@@ -1,0 +1,23 @@
+<div class="app-shell">
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a routerLink="/home" class="brand">
+        <span class="brand-icon">◈</span>
+        <span class="brand-name">AlbumBrowser</span>
+      </a>
+      <nav class="nav-links">
+        <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+        <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+        <a routerLink="/albums" routerLinkActive="active" class="nav-link">Albums</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="footer">
+    <span>Album Browser — Web Development Lab 6</span>
+  </footer>
+</div>
