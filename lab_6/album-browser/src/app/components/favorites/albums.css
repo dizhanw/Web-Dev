@@ -1,0 +1,70 @@
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.album-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.album-row:hover {
+  border-color: #3a6cf4;
+  background: #f0f4ff;
+}
+
+.album-id {
+  font-size: 12px;
+  color: #aaa;
+  width: 40px;
+}
+
+.album-title {
+  flex: 1;
+  font-size: 14px;
+  padding: 0 12px;
+}
+
+.delete-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #999;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.delete-btn:hover:not(:disabled) {
+  border-color: #e55;
+  color: #e55;
+  background: #fff0f0;
+}
+
+/* star/favorite button */
+.favorite-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  padding: 0 6px;
+  cursor: pointer;
+}
+.favorite-btn:hover {
+  color: #333;
+}
+.favorite-btn.favorited {
+  color: gold;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #aaa;
+}

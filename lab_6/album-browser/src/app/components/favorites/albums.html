@@ -1,0 +1,57 @@
+<div class="albums-page">
+  <div class="page-header">
+    <div>
+      <p class="page-label"> Collection</p>
+      <h1 class="page-title">All Albums</h1>
+    </div>
+    <div class="album-count" *ngIf="!loading">
+      {{ albums.length }} albums
+    </div>
+  </div>
+  
+
+  <div class="loading-container" *ngIf="loading">
+    <div class="spinner"></div>
+    <p>Loading albums...</p>
+  </div>
+
+  <div class="albums-list" *ngIf="!loading">
+    <div
+      class="album-row"
+      *ngFor="let album of albums"
+      (click)="navigateToAlbum(album.id)"
+      [class.deleting]="deletingId === album.id"
+    >
+      <div class="album-id">#{{ album.id }}</div>
+      <div class="album-info">
+        <span class="album-title">{{ album.title }}</span>
+        <span class="album-user">User {{ album.userId }}</span>
+      </div>
+      <div class="album-actions">
+        <span class="view-hint">Delete →</span>
+        <button
+          class="delete-btn"
+          (click)="deleteAlbum($event, album.id)"
+          [disabled]="deletingId === album.id"
+          title="Delete album"
+        >
+          <span *ngIf="deletingId !== album.id">✕</span>
+          <span *ngIf="deletingId === album.id">...</span>
+        </button>
+        <!-- favorite star -->
+        <button
+          class="favorite-btn"
+          (click)="toggleFavorite($event, album)"
+          [class.favorited]="album.favorite"
+          title="Toggle favorite"
+        >
+          {{ album.favorite ? '★' : '☆' }}
+        </button>
+      </div>
+    </div>
+
+    <div class="empty-state" *ngIf="albums.length === 0">
+      <p>No albums found.</p>
+    </div>
+  </div>
+</div>

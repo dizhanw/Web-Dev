@@ -1,0 +1,9 @@
+<h1>Мои заметки</h1>
+
+<ul>
+  <li *ngFor="let note of notes()">
+    <strong>{{ note.title }}</strong>
+    {{ note.content }}
+    <small>{{ note.createdAt | date:'short' }}</small>
+  </li>
+</ul>

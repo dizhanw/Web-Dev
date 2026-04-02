@@ -1,0 +1,17 @@
+<div class="tabs">
+  <button [class.active]="activeTab === 'all'" (click)="selectTab('all')">All Products</button>
+  <button [class.active]="activeTab === 'favorites'" (click)="selectTab('favorites')">Favorites</button>
+</div>
+
+<p class="empty-state" *ngIf="productsToShow.length === 0">
+  {{ activeTab === 'all' ? 'No products in this category.' : 'No products in favorites yet.' }}
+</p>
+
+<div class="product-grid" *ngIf="productsToShow.length > 0">
+  <app-product-item
+    *ngFor="let product of productsToShow"
+    [product]="product"
+    (deleteProduct)="onDelete($event)"
+    (toggleFavorite)="onToggleFavorite($event)">
+  </app-product-item>
+</div>
